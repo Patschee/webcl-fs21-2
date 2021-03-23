@@ -28,10 +28,24 @@
             background: #9ae69c88;
             padding: 1em;
             border-radius: 2em;
+            position: relative;
+
         }
 
         /* todo: make a rainbow-colored shadow by blurring a positioned background */
-
+        /* pseudo element */
+        .rainbow::before{
+            content: "";
+            background: linear-gradient(90deg, red,orange,yellow,greenyellow,lightblue,blue,violet);
+            position: absolute;
+            top:    -0.3em;
+            bottom: -0.3em;
+            left:   -0.3em;
+            right:  -0.3em;
+            z-index: -1;
+            border-radius: 2em;
+            filter:blur(.3em);
+        }
 
     </style>
 </head>
